@@ -1,0 +1,109 @@
+@media (max-width: 768px) {
+  .game {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .game__card {
+    font-size: 30px;
+  }
+
+  .game__card_easy {
+    height: 125px;
+  }
+
+  .game__card_medium {
+    height: 95px;
+  }
+
+  .game__card_hard {
+    height: 70px;
+  }
+
+  .timer {
+    margin-bottom: 20px;
+  }
+
+  .timer__span {
+    font-size: 35px;
+  }
+
+  .modals__window {
+    width: 50%;
+  }
+}
+
+.restart__btn {
+  padding: 15px 30px;
+}
+
+@media (max-width: 576px) {
+  .game__card {
+    width: 20%;
+    height: 65px;
+    font-size: 25px;
+  }
+
+  .restart__btn {
+    font-size: 20px;
+  }
+
+  .timer__span {
+    font-size: 25px;
+  }
+
+  .difficult-select__title {
+    font-size: 32px;
+  }
+
+  .btn-difficult {
+    font-size: 20px;
+  }
+
+  .modals__window {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .game {
+    gap: 15px;
+  }
+
+  .game__card {
+    font-size: 22px;
+  }
+
+  .difficult-select__title {
+    font-size: 28px;
+  }
+}
+
+@media (hover: hover) {
+  .btn-difficult:hover {
+    background-color: #cf3a3a;
+  }
+
+  .restart__btn:hover {
+    background-color: #cf3a3a;
+  }
+
+  .game__card:hover {
+    background-color: #cf3a3a;
+  }
+}
+
+@media (hover: none) {
+  .btn-difficult:active {
+    background-color: #cf3a3a;
+  }
+
+  .restart__btn:active {
+    background-color: #cf3a3a;
+  }
+
+  .game__card:active {
+    background-color: #cf3a3a;
+  }
+}
+
