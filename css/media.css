@@ -56,7 +56,7 @@
     font-size: 32px;
   }
 
-  .btn-difficult {
+  .difficult-select__btn {
     font-size: 20px;
   }
 
@@ -80,7 +80,7 @@
 }
 
 @media (hover: hover) {
-  .btn-difficult:hover {
+  .difficult-select__btn:hover {
     background-color: #cf3a3a;
   }
 
@@ -94,7 +94,7 @@
 }
 
 @media (hover: none) {
-  .btn-difficult:active {
+  .difficult-select__btn:active {
     background-color: #cf3a3a;
   }
 

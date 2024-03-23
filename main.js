@@ -50,6 +50,8 @@
     game.classList.remove("game_visible");
     restart.classList.remove("restart_visible");
     timer.classList.remove("timer_visible");
+    modalOverlay.classList.remove("modals_visible");
+    modalWindow.classList.remove("modals__window_visible");
   }
 
   function countdownTimer(span, cb) {
@@ -77,7 +79,7 @@
     const createDifficultBtn = (difficult, title) => {
       const btnDifficult = document.createElement("button");
       btnDifficult.textContent = title;
-      btnDifficult.classList.add("btn-difficult");
+      btnDifficult.classList.add("difficult-select__btn");
 
       btnDifficult.addEventListener("click", () => {
         difficultSelect.innerHTML = "";
