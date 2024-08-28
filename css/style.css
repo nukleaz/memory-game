@@ -1,269 +1,269 @@
 html {
-  box-sizing: border-box;
-  overflow: hidden;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-Bold.eot");
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
-    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Montserrat';
+	src: url('Montserrat-Bold.eot');
+	src: local('Montserrat Bold'), local('Montserrat-Bold'),
+		url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+		url('../fonts/Montserrat-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat-Medium.eot");
-  src: local("Montserrat Medium"), local("Montserrat-Medium"),
-    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("../fonts/Montserrat-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
+	font-family: 'Montserrat';
+	src: url('Montserrat-Medium.eot');
+	src: local('Montserrat Medium'), local('Montserrat-Medium'),
+		url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+		url('../fonts/Montserrat-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
 }
 
 :root {
-  --gap: 25px;
-  --main-card-color: linear-gradient(to bottom right, #6fcef6d9, #dddddddf);
-  --shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	--gap: 25px;
+	--main-card-color: linear-gradient(to bottom right, #6fcef6d9, #dddddddf);
+	--shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .page {
-  display: flex;
-  height: 100dvh;
-  align-items: center;
-  justify-content: center;
-  min-width: 320px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+	display: flex;
+	height: 100dvh;
+	align-items: center;
+	justify-content: center;
+	min-width: 320px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+	width: 100%;
 }
 
 .difficult-select {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
 }
 
 .difficult-select__title {
-  margin: 0;
-  font-size: 40px;
-  font-weight: 700;
+	margin: 0;
+	font-size: 40px;
+	font-weight: 700;
 }
 
 .difficult-select__btn {
-  padding: 20px 60px;
-  border: none;
-  border-radius: 15px;
-  background: var(--main-card-color);
-  font-size: 25px;
-  color: #000000;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  box-shadow: var(--shadow);
+	padding: 20px 60px;
+	border: none;
+	border-radius: 15px;
+	background: var(--main-card-color);
+	font-size: 25px;
+	color: #000000;
+	cursor: pointer;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+	box-shadow: var(--shadow);
 }
 
 .restart__btn {
-  padding: 20px 35px;
-  border: none;
-  border-radius: 15px;
-  background: var(--main-card-color);
-  box-shadow: var(--shadow);
-  font-size: 25px;
-  color: #000000;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
+	padding: 20px 35px;
+	border: none;
+	border-radius: 15px;
+	background: var(--main-card-color);
+	box-shadow: var(--shadow);
+	font-size: 25px;
+	color: #000000;
+	cursor: pointer;
+	transition: background 0.2s ease-in-out;
 }
 
 .restart__btn:active {
-  background-color: #121010;
+	background-color: #121010;
 }
 
 .game {
-  display: flex;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--gap);
-  max-width: 1000px;
-  width: 100%;
-  margin-bottom: var(--gap);
-  animation: 0.5s game_visible ease-in-out;
+	display: flex;
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+	max-width: 1000px;
+	width: 100%;
+	margin-bottom: var(--gap);
+	animation: 0.5s game_visible ease-in-out;
 }
 
 .restart {
-  display: none;
-  height: 100%;
-  animation: 0.5s restart_visible ease-in-out;
+	display: none;
+	height: 100%;
+	animation: 0.5s restart_visible ease-in-out;
 }
 
 .game__card {
-  display: flex;
-  transform: rotateY(180deg);
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  background: var(--main-card-color);
-  box-shadow: var(--shadow);
-  color: transparent;
-  font-size: 40px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+	display: flex;
+	transform: rotateY(180deg);
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	background: var(--main-card-color);
+	box-shadow: var(--shadow);
+	color: transparent;
+	font-size: 40px;
+	cursor: pointer;
+	transition: background 0.3s ease-in-out, transform 0.3s ease-in-out,
+		color 0.3s ease-in-out;
 }
 
 .game__card_easy {
-  width: 20%;
-  height: 165px;
+	width: 20%;
+	height: 135px;
 }
 
 .game__card_medium {
-  width: 19%;
-  height: 125px;
+	width: 19%;
+	height: 100px;
 }
 
 .game__card_hard {
-  width: 15%;
-  height: 100px;
+	width: 15%;
+	height: 100px;
 }
 
 .game__card_check {
-  pointer-events: none;
-  transform: perspective(200px) rotateY(360deg);
-  background-color: #121010;
-  font-size: 40px;
-  color: #000000;
+	pointer-events: none;
+	transform: perspective(200px) rotateY(360deg);
+	background-color: #121010;
+	font-size: 40px;
+	color: #000000;
 }
 
 .game__card_correct {
-  pointer-events: none;
-  transform: rotateY(360deg);
-  background: linear-gradient(to bottom right, #6fcef69c, #52ff66eb);
-  color: #000000;
+	pointer-events: none;
+	transform: rotateY(360deg);
+	background: linear-gradient(to bottom right, #6fcef69c, #52ff66eb);
+	color: #000000;
 }
 
 .modals {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
 }
 
 .modals__window {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap);
-  width: 30%;
-  height: 30dvh;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: all 0.3s;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap);
+	width: 30%;
+	height: 30dvh;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: all 0.3s;
 }
 
 .modals_visible {
-  opacity: 1;
-  visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 .modals__window_visible {
-  display: flex;
+	display: flex;
 }
 
 .modals__span {
-  color: white;
-  font-size: 25px;
+	color: white;
+	font-size: 25px;
 }
 
 .timer {
-  display: none;
-  padding: 10px 25px;
-  border-radius: 15px;
-  background: var(--main-card-color);
-  margin-bottom: var(--gap);
-  animation: 0.5s timer_visible ease-in-out;
+	display: none;
+	padding: 10px 25px;
+	border-radius: 15px;
+	background: var(--main-card-color);
+	margin-bottom: var(--gap);
+	animation: 0.5s timer_visible ease-in-out;
 }
 
 .timer__span {
-  font-style: normal;
-  font-size: 45px;
+	font-style: normal;
+	font-size: 45px;
 }
 
 .restart_visible {
-  display: block;
+	display: block;
 }
 
 .game_visible {
-  display: flex;
+	display: flex;
 }
 
 .timer_visible {
-  display: inline-block;
+	display: inline-block;
 }
 
 @keyframes game_visible {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes timer_visible {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes restart_visible {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
